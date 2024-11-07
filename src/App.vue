@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { invoke } from "@tauri-apps/api/core";
+import { ref } from 'vue'
+import { invoke } from '@tauri-apps/api/core'
 
-const greetMsg = ref("");
-const name = ref("");
+const greetMsg = ref('')
+const name = ref('')
 
 async function greet() {
   // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-  greetMsg.value = await invoke("greet", { name: name.value });
+  greetMsg.value = await invoke('greet', { name: name.value })
 }
 </script>
 
@@ -17,10 +17,10 @@ async function greet() {
 
     <div class="row">
       <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo vite" alt="Vite logo" />
+        <img src="./assets/vite.svg" class="logo vite" alt="Vite logo" />
       </a>
       <a href="https://tauri.app" target="_blank">
-        <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
+        <img src="./assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
       </a>
       <a href="https://vuejs.org/" target="_blank">
         <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
@@ -44,7 +44,6 @@ async function greet() {
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #249b73);
 }
-
 </style>
 <style>
 :root {
@@ -156,5 +155,4 @@ button {
     background-color: #0f0f0f69;
   }
 }
-
 </style>
